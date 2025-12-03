@@ -1,4 +1,4 @@
-# Scribble Royale 🎨
+# Scribble 🎨
 
 A real-time multiplayer drawing & guessing game built with React, Vite, Firebase, and TailwindCSS.
 Features integrated DSA structures (Stack, Queue, Trie, MinHeap, HashMap) for game logic.
@@ -90,4 +90,3 @@ If you prefer not to use the live cloud DB:
 - **Trie**: Used in `GuessBox.jsx` and `src/dsa/Trie.js` for efficient word validation.
 - **MinHeap**: Used in `GameRoom.jsx` and `src/dsa/MinHeap.js` for selecting words based on difficulty.
 - **HashMap**: Used in `PlayerList.jsx` and `src/dsa/HashMap.js` for efficient player score management.
-
