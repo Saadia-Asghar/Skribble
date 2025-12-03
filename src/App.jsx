@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import Home from './pages/Home';
 import GameRoom from './pages/GameRoom';
+import { joinRoom } from './db/roomAPI';
 import DoodleBackground from './components/DoodleBackground';
 
 const GameRoomWrapper = () => {
@@ -18,8 +19,7 @@ const GameRoomWrapper = () => {
     const handleJoin = async () => {
         if (!name) return;
         // We need to join the room via API to get playerId
-        // Dynamic import to avoid circular dependencies if any, or just import at top
-        const { joinRoom } = await import('./db/roomAPI');
+
         try {
             const { playerId } = await joinRoom(roomId, name);
             setJoinState({ playerId, name });
